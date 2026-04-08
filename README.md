@@ -4,13 +4,14 @@ An open educational resource (OER) for motion design students. Curated examples,
 
 ## Live site
 
-→ [your-username.github.io/motion-archive](https://your-username.github.io/motion-archive)
+→ [https://luckydumpling.github.io/motion-archive/](https://luckydumpling.github.io/motion-archive/)
 
 ## About
 
 This archive collects motion design work worth studying. Each entry includes an analysis written by a student or curator, full attribution, and clear licensing information.
 
 **Content is organised by:**
+
 - Type: Tutorial or Inspiration
 - Technique: easing, timing, typography, layering, morphing, rhythm, 2D, 3D…
 
