@@ -1,0 +1,110 @@
+---
+layout: base.njk
+---
+<article class="entry-page">
+
+  <a href="/" class="back">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,2 4,7 9,12"/></svg>
+    All entries
+  </a>
+
+  <div class="entry-meta">
+    <span class="type-badge type-{{ type }}">{{ type }}</span>
+    <span class="meta-dot"></span>
+    <span class="meta-text">{{ year }}</span>
+    <span class="meta-dot"></span>
+    <span class="meta-text">{{ creator }}</span>
+  </div>
+
+  <h1>{{ title }}</h1>
+
+  <div class="tag-list">
+    {% for tag in tags %}
+      <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
+
+  {% if status == "unavailable" %}
+    <div class="video-unavailable">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/><line x1="4" y1="4" x2="20" y2="20"/></svg>
+      <p>This video is no longer available at the original URL.</p>
+      {% if archived_url %}
+        <a href="{{ archived_url }}" target="_blank" rel="noopener" class="archive-link">View on Wayback Machine ↗</a>
+      {% endif %}
+    </div>
+  {% else %}
+    {% set embedUrl = video_url | embedFromUrl %}
+    {% if embedUrl %}
+      <div class="video-wrap">
+        <iframe src="{{ embedUrl }}" allowfullscreen loading="lazy" title="{{ title }}"></iframe>
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <section class="entry-section">
+    <h2 class="section-label">Analysis</h2>
+    <div class="entry-content">
+      {{ content }}
+    </div>
+  </section>
+
+  {% if techniques %}
+  <section class="entry-section">
+    <h2 class="section-label">Key techniques</h2>
+    <div class="tag-list">
+      {% for t in techniques %}
+        <a href="/tags/{{ t }}/" class="tag">{{ t }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <hr class="divider">
+
+  <section class="entry-section">
+    <h2 class="section-label">Attribution</h2>
+    <div class="attribution">
+      <div class="attr-item">
+        <span class="attr-label">Creator</span>
+        <span class="attr-value">{{ creator }}</span>
+      </div>
+      <div class="attr-item">
+        <span class="attr-label">Year</span>
+        <span class="attr-value">{{ year }}</span>
+      </div>
+      <div class="attr-item">
+        <span class="attr-label">Platform</span>
+        <span class="attr-value">{{ video_url | platformFromUrl }}</span>
+      </div>
+      <div class="attr-item">
+        <span class="attr-label">Accessed</span>
+        <span class="attr-value">{{ accessed | formatDate }}</span>
+      </div>
+      <div class="attr-item attr-full">
+        <span class="attr-label">Source</span>
+        <a href="{{ source_url }}" class="attr-link" target="_blank" rel="noopener">{{ source_url }}</a>
+      </div>
+      <div class="attr-item">
+        <span class="attr-label">Video license</span>
+        <span class="attr-value">
+          {% if status == "unavailable" %}
+            No longer available
+          {% elif video_license %}
+            {{ video_license }}
+          {% else %}
+            {{ video_url | licenseFromUrl }}
+          {% endif %}
+        </span>
+      </div>
+      <div class="attr-item">
+        <span class="attr-label">Contributor</span>
+        <span class="attr-value">{{ contributor }}</span>
+      </div>
+      <div class="attr-item attr-full">
+        <span class="attr-label">Analysis license</span>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license-badge" target="_blank" rel="noopener">CC BY-SA 4.0 ↗</a>
+      </div>
+    </div>
+  </section>
+
+</article>

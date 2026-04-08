@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — {% endif %}Motion Design Archive</title>
+  <meta name="description" content="An open educational resource for motion design students.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="site-title">Motion Design Archive</a>
+    <span class="site-meta">OER · CC BY-SA 4.0</span>
+  </header>
+  <main class="main">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <p>Archive content licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> unless otherwise noted. Video licenses remain with their respective owners.</p>
+  </footer>
+</body>
+</html>

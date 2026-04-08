@@ -1,0 +1,12 @@
+{
+  "name": "motion-design-archive",
+  "version": "1.0.0",
+  "description": "An open educational resource archive for motion design",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
