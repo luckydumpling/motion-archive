@@ -344,3 +344,12 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
+
+.level-badge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+.level-beginner { background: #EAF3DE; color: #27500A; border: 0.5px solid #97C459; }
+.level-intermediate { background: #FAEEDA; color: #633806; border: 0.5px solid #EF9F27; }
+.level-advanced { background: #FAECE7; color: #712B13; border: 0.5px solid #F0997B; }

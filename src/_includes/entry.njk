@@ -10,6 +10,7 @@ layout: base.njk
 
   <div class="entry-meta">
     <span class="type-badge type-{{ type }}">{{ type }}</span>
+{% if level %}<span class="level-badge level-{{ level }}">{{ level }}</span>{% endif %}
     <span class="meta-dot"></span>
     <span class="meta-text">{{ year }}</span>
     <span class="meta-dot"></span>

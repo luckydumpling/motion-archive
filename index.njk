@@ -50,6 +50,7 @@ layout: base.njk
         <div class="card-body">
           <div class="card-meta">
             <span class="type-badge type-{{ entry.data.type }}">{{ entry.data.type }}</span>
+{% if entry.data.level %}<span class="level-badge level-{{ entry.data.level }}">{{ entry.data.level }}</span>{% endif %}
             <span class="meta-dot"></span>
             <span class="meta-text">{{ entry.data.year }}</span>
             <span class="meta-dot"></span>

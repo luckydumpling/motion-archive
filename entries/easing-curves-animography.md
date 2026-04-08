@@ -11,6 +11,7 @@ contributor: Your Name
 tags: [easing, timing, 2D]
 techniques: [easing, timing]
 status: active
+level: beginner
 ---
 
 A clear and methodical walkthrough of easing as a design tool rather than a technical setting. The tutorial demonstrates how the shape of a curve directly determines the emotional quality of a motion — a linear move feels mechanical, while a well-tuned ease-out feels physical and alive.
