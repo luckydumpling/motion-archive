@@ -129,7 +129,7 @@ a { color: inherit; text-decoration: none; }
 }
 .ftag:hover { border-color: var(--gray-400); }
 .ftag.active-type { background: var(--purple-50); color: var(--purple-800); border-color: var(--purple-200); }
-.ftag.active-tech { background: var(--teal-50); color: var(--teal-800); border-color: var(--teal-200); }
+.ftag.active-tool { background: #FAEEDA; color: #633806; border-color: #EF9F27; }
 
 .count {
   font-size: 13px;
