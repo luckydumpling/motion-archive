@@ -31,7 +31,7 @@ layout: base.njk
   {% for entry in collections.all %}
     {% if entry.data.layout == "entry.njk" %}
       {% set thumb = entry.data.video_url | thumbnailFromUrl %}
-      <a href="{{ entry.url }}" class="card"
+      <a href="/motion-archive{{ entry.url }}" class="card"
         data-type="{{ entry.data.type }}"
         data-tags="{{ entry.data.tags | join(',') }}">
         <div class="thumb">

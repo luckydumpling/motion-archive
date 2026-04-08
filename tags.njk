@@ -16,7 +16,7 @@ permalink: /tags/{{ tag }}/
     {% for entry in collections.all %}
       {% if entry.data.layout == "entry.njk" and tag in entry.data.tags %}
         {% set thumb = entry.data.video_url | thumbnailFromUrl %}
-        <a href="{{ entry.url }}" class="card">
+        <a href="/motion-archive{{ entry.url }}" class="card">
           <div class="thumb">
             {% if entry.data.status == "unavailable" %}
               <div class="thumb-unavailable"><span>No longer available</span></div>
