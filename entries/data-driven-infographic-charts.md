@@ -3,7 +3,7 @@ layout: entry.njk
 title: Data-driven animated infographic charts in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Claudio Barba
 year: 2022
 source_url: https://www.youtube.com/watch?v=dNkDAdihL60
 video_url: https://www.youtube.com/watch?v=dNkDAdihL60

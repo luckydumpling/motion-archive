@@ -3,7 +3,7 @@ layout: entry.njk
 title: How an Excel spreadsheet saved me hours in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Sergei Prokhnevskiy
 year: 2022
 source_url: https://www.youtube.com/watch?v=Ov4Zd-Mgmbo
 video_url: https://www.youtube.com/watch?v=Ov4Zd-Mgmbo

@@ -3,7 +3,7 @@ layout: entry.njk
 title: After Effects warp effect — on another level
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: MotionXP
 year: 2023
 source_url: https://www.youtube.com/watch?v=7HKJBPL9458
 video_url: https://www.youtube.com/watch?v=7HKJBPL9458

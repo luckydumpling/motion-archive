@@ -3,7 +3,7 @@ layout: entry.njk
 title: Automate After Effects with Python
 type: tutorial
 level: advanced
-creator: Unknown
+creator: Gerg
 year: 2022
 source_url: https://www.youtube.com/watch?v=6EZ4liFlIkw
 video_url: https://www.youtube.com/watch?v=6EZ4liFlIkw

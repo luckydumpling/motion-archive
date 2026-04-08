@@ -3,7 +3,7 @@ layout: entry.njk
 title: Fun kinetic typography animation in After Effects
 type: tutorial
 level: beginner
-creator: Unknown
+creator: Adam Bennett
 year: 2022
 source_url: https://www.youtube.com/watch?v=1hcNQyyZzm8
 video_url: https://www.youtube.com/watch?v=1hcNQyyZzm8

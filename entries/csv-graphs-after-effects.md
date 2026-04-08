@@ -3,7 +3,7 @@ layout: entry.njk
 title: CSV generated graphs in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Joe (Workbench)
 year: 2022
 source_url: https://www.youtube.com/watch?v=5bXfhogposM
 video_url: https://www.youtube.com/watch?v=5bXfhogposM

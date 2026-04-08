@@ -3,7 +3,7 @@ layout: entry.njk
 title: Using After Effects, Excel and JSON to create graphs
 type: tutorial
 level: advanced
-creator: Unknown
+creator: Daniel Walter Scott
 year: 2021
 source_url: https://www.youtube.com/watch?v=eo_TPwikuDI
 video_url: https://www.youtube.com/watch?v=eo_TPwikuDI

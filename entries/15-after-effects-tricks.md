@@ -3,7 +3,7 @@ layout: entry.njk
 title: 15 After Effects tricks most pros don't know
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Ben Marriott
 year: 2023
 source_url: https://www.youtube.com/watch?v=NgSAv5BWwTg
 video_url: https://www.youtube.com/watch?v=NgSAv5BWwTg

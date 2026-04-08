@@ -3,7 +3,7 @@ layout: entry.njk
 title: Change color over time using a CSV file in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Daron Tyler
 year: 2022
 source_url: https://www.youtube.com/watch?v=tu0RNSI4JME
 video_url: https://www.youtube.com/watch?v=tu0RNSI4JME

@@ -3,7 +3,7 @@ layout: entry.njk
 title: Dynamically resizing line of shapes in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Evan Abrams
 year: 2022
 source_url: https://www.youtube.com/watch?v=mlPUM2Dvq7E
 video_url: https://www.youtube.com/watch?v=mlPUM2Dvq7E

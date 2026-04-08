@@ -3,7 +3,7 @@ layout: entry.njk
 title: How to make a collage animation in After Effects
 type: tutorial
 level: beginner
-creator: Unknown
+creator: Mapal
 year: 2022
 source_url: https://www.youtube.com/watch?v=RdX3yzQDyG4
 video_url: https://www.youtube.com/watch?v=RdX3yzQDyG4

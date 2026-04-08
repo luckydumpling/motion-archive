@@ -3,7 +3,7 @@ layout: entry.njk
 title: Data-driven animation — easily editable charts and graphs
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Jason Boone
 year: 2022
 source_url: https://www.youtube.com/watch?v=fQVGFnrvz-k
 video_url: https://www.youtube.com/watch?v=fQVGFnrvz-k

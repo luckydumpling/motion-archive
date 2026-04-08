@@ -3,7 +3,7 @@ layout: entry.njk
 title: Spring animations in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Mamoworld
 year: 2022
 source_url: https://www.youtube.com/watch?v=8zRY7m-Lca8
 video_url: https://www.youtube.com/watch?v=8zRY7m-Lca8

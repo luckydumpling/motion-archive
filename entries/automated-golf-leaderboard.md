@@ -3,7 +3,7 @@ layout: entry.njk
 title: Automating After Effects — automated golf leaderboard
 type: tutorial
 level: advanced
-creator: Unknown
+creator: Gerg
 year: 2022
 source_url: https://www.youtube.com/watch?v=gX_10Kq7k2g
 video_url: https://www.youtube.com/watch?v=gX_10Kq7k2g

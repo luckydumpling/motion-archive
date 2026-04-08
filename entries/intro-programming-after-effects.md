@@ -3,7 +3,7 @@ layout: entry.njk
 title: An introduction to programming in After Effects
 type: tutorial
 level: intermediate
-creator: Unknown
+creator: Clear Code
 year: 2021
 source_url: https://www.youtube.com/watch?v=Knp2S_gs-Rc
 video_url: https://www.youtube.com/watch?v=Knp2S_gs-Rc

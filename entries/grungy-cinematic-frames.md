@@ -3,7 +3,7 @@ layout: entry.njk
 title: Create grungy cinematic frames in After Effects
 type: tutorial
 level: beginner
-creator: Unknown
+creator: Motion Science
 year: 2023
 source_url: https://www.youtube.com/watch?v=_IUewpLqxCI
 video_url: https://www.youtube.com/watch?v=_IUewpLqxCI

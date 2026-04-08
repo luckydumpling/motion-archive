@@ -3,7 +3,7 @@ layout: entry.njk
 title: How to create and use a CSV file in After Effects
 type: tutorial
 level: beginner
-creator: Unknown
+creator: Sergei Prokhnevskiy
 year: 2021
 source_url: https://www.youtube.com/watch?v=WuiZqunCOYw
 video_url: https://www.youtube.com/watch?v=WuiZqunCOYw

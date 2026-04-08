@@ -3,7 +3,7 @@ layout: entry.njk
 title: Dynamic proximity effectors with expressions
 type: tutorial
 level: advanced
-creator: Unknown
+creator: Creative Dojo
 year: 2022
 source_url: https://www.youtube.com/watch?v=puo9GuGGo-k
 video_url: https://www.youtube.com/watch?v=puo9GuGGo-k
