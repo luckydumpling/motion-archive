@@ -22,6 +22,15 @@ layout: base.njk
         <button class="ftag" data-tech="{{ tag }}">{{ tag }}</button>
       {% endfor %}
     </div>
+    <div class="filter-divider"></div>
+  <div class="filter-section">
+    <div class="filter-label">Tool</div>
+    <div class="filter-row" id="tool-filters">
+      <button class="ftag active-tool" data-tool="all">All</button>
+      <button class="ftag" data-tool="after-effects">After Effects</button>
+      <button class="ftag" data-tool="touchdesigner">TouchDesigner</button>
+    </div>
+  </div>
   </div>
   <div class="filter-divider"></div>
   <div class="count" id="count"></div>
@@ -33,7 +42,8 @@ layout: base.njk
       {% set thumb = entry.data.video_url | thumbnailFromUrl %}
       <a href="/motion-archive{{ entry.url }}" class="card"
         data-type="{{ entry.data.type }}"
-        data-tags="{{ entry.data.tags | join(',') }}">
+        data-tags="{{ entry.data.tags | join(',') }}"
+        data-tool="{{ entry.data.tool }}">
         <div class="thumb">
           {% if entry.data.status == "unavailable" %}
             <div class="thumb-unavailable">
@@ -81,8 +91,62 @@ layout: base.njk
 
 <script>
 const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card');
 let activeType = 'all';
 let activeTech = 'all';
+let activeTool = 'all';
+
+function updateCount(n) {
+  const el = document.getElementById('count');
+  let label = '<span>' + n + '</span> ' + (n === 1 ? 'entry' : 'entries');
+  if (activeType !== 'all') label += ' · ' + activeType;
+  if (activeTech !== 'all') label += ' · ' + activeTech;
+  if (activeTool !== 'all') label += ' · ' + activeTool;
+  el.innerHTML = label;
+}
+
+function filter() {
+  let visible = 0;
+  cards.forEach(card => {
+    const matchType = activeType === 'all' || card.dataset.type === activeType;
+    const matchTech = activeTech === 'all' || (card.dataset.tags || '').split(',').includes(activeTech);
+    const matchTool = activeTool === 'all' || card.dataset.tool === activeTool;
+    const show = matchType && matchTech && matchTool;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  updateCount(visible);
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+}
+
+document.getElementById('type-filters').querySelectorAll('.ftag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('type-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-type'));
+    btn.classList.add('active-type');
+    activeType = btn.dataset.type;
+    filter();
+  });
+});
+
+document.getElementById('tech-filters').querySelectorAll('.ftag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('tech-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-tech'));
+    btn.classList.add('active-tech');
+    activeTech = btn.dataset.tech;
+    filter();
+  });
+});
+
+document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-tool'));
+    btn.classList.add('active-tool');
+    activeTool = btn.dataset.tool;
+    filter();
+  });
+});
+
+filter();
 
 function updateCount(n) {
   const el = document.getElementById('count');

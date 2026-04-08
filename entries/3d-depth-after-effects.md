@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [3D, depth, layering, composition]
 techniques: [layering, 3D]
 status: active
+tool: after-effects
 ---
 
 A focused tutorial on creating the illusion of depth in After Effects without a full 3D pipeline. The key technique is parallax — separating elements across z-space so that camera movement reveals depth naturally. Understanding how depth cues work visually is as important here as the technical steps, making this useful for both motion designers and anyone thinking about spatial composition.

@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, automation, workflow]
 techniques: [data-driven, automation]
 status: active
+tool: after-effects
 ---
 
 An advanced deep-dive into using Python to drive After Effects automation at scale. This goes well beyond CSV imports — Python scripts can generate entire compositions from data. Challenging but transformative for anyone working with large datasets or templated content production.

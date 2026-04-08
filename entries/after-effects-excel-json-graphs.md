@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, json, charts]
 techniques: [data-driven, workflow]
 status: active
+tool: after-effects
 ---
 
 Combines three data formats — After Effects, Excel, and JSON — into a single pipeline. The JSON layer adds flexibility over pure CSV workflows, enabling more complex data structures. A good bridge between beginner data-driven work and full automation.

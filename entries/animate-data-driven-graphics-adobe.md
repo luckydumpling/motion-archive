@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, workflow, charts]
 techniques: [data-driven, workflow]
 status: active
+tool: after-effects
 ---
 
 Adobe's official tutorial on data-driven graphics covers the feature from a workflow perspective. Useful for understanding the intended pipeline and the limits of the built-in toolset before exploring expression-based alternatives.

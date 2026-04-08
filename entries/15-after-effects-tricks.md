@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [workflow, tips, expressions]
 techniques: [workflow]
 status: active
+tool: after-effects
 ---
 
 A fast-paced collection of lesser-known After Effects techniques. Not every tip will be relevant, but several cover workflow efficiency patterns that experienced users often discover accidentally. Worth watching at speed and pausing on what surprises you.
