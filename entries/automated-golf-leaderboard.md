@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, automation, workflow]
 techniques: [data-driven, automation]
 status: active
+tool: after-effects
 ---
 
 A real-world case study of a live data automation pipeline in After Effects. The leaderboard updates automatically from live sports data — a concrete example of motion design operating as a production system rather than a one-off creative piece. Useful for understanding the gap between prototype and production.

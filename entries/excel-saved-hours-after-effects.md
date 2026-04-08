@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, workflow, expressions]
 techniques: [data-driven, workflow]
 status: active
+tool: after-effects
 ---
 
 A production-focused tutorial showing how to use Excel as a control layer for After Effects animations. The efficiency argument is made clearly: changes to data automatically ripple through the animation, eliminating manual keyframe updates. Essential viewing for anyone doing repetitive data visualization work.

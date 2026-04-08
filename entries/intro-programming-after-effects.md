@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [expressions, scripting, workflow]
 techniques: [expressions, scripting]
 status: active
+tool: after-effects
 ---
 
 A conceptual introduction to thinking programmatically inside After Effects. Bridges the gap between animator and developer mindsets — understanding this shift is what makes expressions feel like a creative tool rather than a technical obstacle.

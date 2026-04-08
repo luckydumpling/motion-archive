@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [cinematic, texture, composition, 2D]
 techniques: [layering, color]
 status: active
+tool: after-effects
 ---
 
 A quick, accessible tutorial on adding cinematic texture and framing to compositions in After Effects. The grunge and film-frame techniques shown here are good entry-level tools for students learning how surface quality and framing affect the overall mood of a piece. Worth studying alongside more technically demanding tutorials as a reminder that atmosphere is also a design decision.

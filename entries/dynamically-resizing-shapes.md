@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [expressions, shapes, 2D]
 techniques: [expressions, layering]
 status: active
+tool: after-effects
 ---
 
 A focused tutorial on one specific but highly reusable technique — making a row of shapes resize and reposition automatically when the count changes. The pattern demonstrated here applies to any repeating element system: tags, labels, icon rows.

@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, charts, workflow]
 techniques: [data-driven, charts]
 status: active
+tool: after-effects
 ---
 
 Focuses on building chart templates that are genuinely editable without touching expressions. The emphasis on editability is the right design principle — good motion design systems anticipate change and build for it from the start.

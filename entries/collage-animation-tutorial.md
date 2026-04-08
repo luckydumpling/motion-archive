@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [collage, layering, 2D]
 techniques: [layering, timing]
 status: active
+tool: after-effects
 ---
 
 A beginner-accessible introduction to collage-style animation — layering mixed media elements with motion. The approach is informal and exploratory, which makes it a good entry point for students who are intimidated by more systematic tutorials.

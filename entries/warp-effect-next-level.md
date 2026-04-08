@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [distortion, warp, 2D]
 techniques: [morphing, timing]
 status: active
+tool: after-effects
 ---
 
 Pushes the standard warp effect beyond its default use as a subtle distortion tool into something more expressive and dramatic. The techniques shown reframe warp as a motion design instrument — useful for transitions, reveals, and emphasis moments.

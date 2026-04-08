@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [data-driven, csv, expressions]
 techniques: [data-driven]
 status: active
+tool: after-effects
 ---
 
 A beginner-friendly introduction to CSV files in After Effects. Covers the basics of structuring your data file and linking it to text and shape layers. A good starting point before moving on to more complex data-driven animation workflows.

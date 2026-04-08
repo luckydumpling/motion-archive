@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [expressions, motion-systems, 2D]
 techniques: [expressions, timing]
 status: active
+tool: after-effects
 ---
 
 Shows how to build effector systems in After Effects using expressions — layers that react dynamically to the position of other layers. The result is motion that feels organic and responsive rather than scripted, achieved entirely through code rather than keyframes.

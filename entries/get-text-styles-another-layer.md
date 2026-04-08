@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [expressions, typography, workflow]
 techniques: [expressions, typography]
 status: active
+tool: after-effects
 ---
 
 A short, focused tip on linking text style properties between layers using expressions. Small technique, large impact on workflow — maintaining visual consistency across a project becomes dramatically easier when styles are linked rather than manually matched.

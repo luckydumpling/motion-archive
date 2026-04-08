@@ -12,6 +12,7 @@ contributor: Oliver Aemisegger
 tags: [easing, expressions, 2D]
 techniques: [easing, timing]
 status: active
+tool: after-effects
 ---
 
 Covers how to build spring-based easing using expressions — motion that overshoots, bounces, and settles like a physical object under tension. The spring model is one of the most convincing ways to add physical weight to UI and motion design animations.
