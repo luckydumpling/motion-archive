@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addGlobalData("pathPrefix", "/motion-archive/");
 
   eleventyConfig.addFilter("platformFromUrl", function(url) {
     if (!url) return "";
