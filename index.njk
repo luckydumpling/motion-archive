@@ -1,7 +1,6 @@
 ---
 layout: base.njk
 ---
-{% set entries = collections.all | selectattr("data.layout", "equalto", "entry.njk") %}
 {% set allTags = collections.allTags %}
 
 <div class="filter-bar">
@@ -22,7 +21,8 @@ layout: base.njk
         <button class="ftag" data-tech="{{ tag }}">{{ tag }}</button>
       {% endfor %}
     </div>
-    <div class="filter-divider"></div>
+  </div>
+  <div class="filter-divider"></div>
   <div class="filter-section">
     <div class="filter-label">Tool</div>
     <div class="filter-row" id="tool-filters">
@@ -30,7 +30,6 @@ layout: base.njk
       <button class="ftag" data-tool="after-effects">After Effects</button>
       <button class="ftag" data-tool="touchdesigner">TouchDesigner</button>
     </div>
-  </div>
   </div>
   <div class="filter-divider"></div>
   <div class="count" id="count"></div>
@@ -60,7 +59,8 @@ layout: base.njk
         <div class="card-body">
           <div class="card-meta">
             <span class="type-badge type-{{ entry.data.type }}">{{ entry.data.type }}</span>
-{% if entry.data.level %}<span class="level-badge level-{{ entry.data.level }}">{{ entry.data.level }}</span>{% endif %}
+            {% if entry.data.level %}<span class="level-badge level-{{ entry.data.level }}">{{ entry.data.level }}</span>{% endif %}
+            {% if entry.data.tool %}<span class="tool-badge">{{ entry.data.tool }}</span>{% endif %}
             <span class="meta-dot"></span>
             <span class="meta-text">{{ entry.data.year }}</span>
             <span class="meta-dot"></span>
@@ -90,7 +90,6 @@ layout: base.njk
 <div class="no-results" id="no-results" style="display:none">No entries for this combination yet.</div>
 
 <script>
-const cards = document.querySelectorAll('.card');
 const cards = document.querySelectorAll('.card');
 let activeType = 'all';
 let activeTech = 'all';
@@ -142,48 +141,6 @@ document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(btn =>
     document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-tool'));
     btn.classList.add('active-tool');
     activeTool = btn.dataset.tool;
-    filter();
-  });
-});
-
-filter();
-
-function updateCount(n) {
-  const el = document.getElementById('count');
-  let label = '<span>' + n + '</span> ' + (n === 1 ? 'entry' : 'entries');
-  if (activeType !== 'all' && activeTech !== 'all') label += ' · ' + activeType + ' + ' + activeTech;
-  else if (activeType !== 'all') label += ' · ' + activeType;
-  else if (activeTech !== 'all') label += ' · ' + activeTech;
-  el.innerHTML = label;
-}
-
-function filter() {
-  let visible = 0;
-  cards.forEach(card => {
-    const matchType = activeType === 'all' || card.dataset.type === activeType;
-    const matchTech = activeTech === 'all' || (card.dataset.tags || '').split(',').includes(activeTech);
-    const show = matchType && matchTech;
-    card.style.display = show ? '' : 'none';
-    if (show) visible++;
-  });
-  updateCount(visible);
-  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
-}
-
-document.getElementById('type-filters').querySelectorAll('.ftag').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.getElementById('type-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-type'));
-    btn.classList.add('active-type');
-    activeType = btn.dataset.type;
-    filter();
-  });
-});
-
-document.getElementById('tech-filters').querySelectorAll('.ftag').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.getElementById('tech-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-tech'));
-    btn.classList.add('active-tech');
-    activeTech = btn.dataset.tech;
     filter();
   });
 });
