@@ -38,7 +38,11 @@ layout: base.njk
 <div class="grid" id="grid">
   {% for entry in collections.all %}
     {% if entry.data.layout == "entry.njk" %}
-      {% set thumb = entry.data.video_url | thumbnailFromUrl %}
+      {% if "vimeo.com" in (entry.data.video_url or "") %}
+      {% set thumb = vimeoThumbnails[entry.data.video_url] %}
+      {% else %}
+  {% set thumb = entry.data.video_url | thumbnailFromUrl %}
+{% endif %}
       <a href="/motion-archive{{ entry.url }}" class="card"
         data-type="{{ entry.data.type }}"
         data-tags="{{ entry.data.tags | join(',') }}"
