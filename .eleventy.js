@@ -23,6 +23,20 @@ module.exports = function(eleventyConfig) {
     return "";
   });
 
+  eleventyConfig.addNunjucksAsyncFilter("vimeoThumbnail", async function(url, callback) {
+    if (!url || !url.includes("vimeo.com")) {
+      return callback(null, "");
+    }
+    try {
+      const response = await fetch(`https://vimeo.com/api/oembed.json?url=${encodeURIComponent(url)}`);
+      if (!response.ok) return callback(null, "");
+      const data = await response.json();
+      callback(null, data.thumbnail_url || "");
+    } catch (e) {
+      callback(null, "");
+    }
+  });
+
   eleventyConfig.addFilter("embedFromUrl", function(url) {
     if (!url) return "";
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
