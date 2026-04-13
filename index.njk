@@ -108,7 +108,7 @@ layout: base.njk
 <div class="no-results" id="no-results" style="display:none">No entries for this combination yet.</div>
 
 <script>
-const cards = document.querySelectorAll('.card');
+const cards = Array.from(document.querySelectorAll('.card'));
 let activeType = 'all';
 let activeTech = 'all';
 let activeTool = 'all';
@@ -122,18 +122,41 @@ function updateCount(n) {
   el.innerHTML = label;
 }
 
+function cardMatches(card, type, tech, tool) {
+  const matchType = type === 'all' || card.dataset.type === type;
+  const matchTech = tech === 'all' || (card.dataset.tags || '').split(',').includes(tech);
+  const matchTool = tool === 'all' || card.dataset.tool === tool;
+  return matchType && matchTech && matchTool;
+}
+
 function filter() {
   let visible = 0;
   cards.forEach(card => {
-    const matchType = activeType === 'all' || card.dataset.type === activeType;
-    const matchTech = activeTech === 'all' || (card.dataset.tags || '').split(',').includes(activeTech);
-    const matchTool = activeTool === 'all' || card.dataset.tool === activeTool;
-    const show = matchType && matchTech && matchTool;
+    const show = cardMatches(card, activeType, activeTech, activeTool);
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
   updateCount(visible);
   document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+  updateAvailable();
+}
+
+function updateAvailable() {
+  document.querySelectorAll('#type-filters .ftag').forEach(btn => {
+    if (btn.dataset.type === 'all') return;
+    const hasResults = cards.some(c => cardMatches(c, btn.dataset.type, activeTech, activeTool));
+    btn.disabled = !hasResults;
+  });
+  document.querySelectorAll('#tech-filters .ftag').forEach(btn => {
+    if (btn.dataset.tech === 'all') return;
+    const hasResults = cards.some(c => cardMatches(c, activeType, btn.dataset.tech, activeTool));
+    btn.disabled = !hasResults;
+  });
+  document.querySelectorAll('#tool-filters .ftag').forEach(btn => {
+    if (btn.dataset.tool === 'all') return;
+    const hasResults = cards.some(c => cardMatches(c, activeType, activeTech, btn.dataset.tool));
+    btn.disabled = !hasResults;
+  });
 }
 
 document.getElementById('type-filters').querySelectorAll('.ftag').forEach(btn => {
