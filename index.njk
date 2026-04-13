@@ -57,8 +57,22 @@ layout: base.njk
             <img src="{{ thumb }}" alt="{{ entry.data.title }}" loading="lazy"
               onerror="this.parentElement.innerHTML='<div class=thumb-unavailable><span>Preview unavailable</span></div>'">
           {% else %}
-            <div class="thumb-unavailable"><span>No preview</span></div>
-          {% endif %}
+  {% if entry.data.tool %}
+    <div class="thumb-curriculum">
+      <span class="thumb-curriculum-tool">{{ entry.data.tool }}</span>
+      <span class="thumb-curriculum-label">official curriculum</span>
+    </div>
+      {% else %}
+        {% if entry.data.tool %}
+          <div class="thumb-curriculum">
+            <span class="thumb-curriculum-tool">{{ entry.data.tool }}</span>
+            <span class="thumb-curriculum-label">official curriculum</span>
+          </div>
+        {% else %}
+          <div class="thumb-unavailable"><span>No preview</span></div>
+        {% endif %}
+      {% endif %}
+{% endif %}
         </div>
         <div class="card-body">
           <div class="card-meta">
