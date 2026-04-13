@@ -17,5 +17,3 @@ status: active
 Everything in motion design traces back to this. Muybridge's locomotive studies — 24 cameras triggered in sequence to capture a galloping horse — were the first time human eyes could see what motion actually looks like, frame by frame. Before this, painters drew horses in positions that never existed.
 
 For motion designers the lesson is foundational: movement is not what it appears to be at full speed. Slowed down and broken into frames, it reveals weight, momentum, anticipation, and follow-through — the principles that make the difference between motion that feels alive and motion that feels mechanical.
-
-Every easing curve, every bounce, every overshoot in modern animation software is descended from these plates. The 12 principles of animation are a formalization of what Muybridge first photographed.

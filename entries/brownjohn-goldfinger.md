@@ -6,7 +6,7 @@ tool: other
 creator: Robert Brownjohn
 year: 1964
 source_url: https://www.artofthetitle.com/title/goldfinger/
-video_url: https://www.youtube.com/watch?v=zhMiYMKNMow
+video_url: https://www.youtube.com/watch?v=Qt2WlDM3tEA
 accessed: 2025-01-01
 contributor: Oliver Aemisegger
 tags: [composition, layering, projection, history, 2D]
