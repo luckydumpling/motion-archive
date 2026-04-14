@@ -57,11 +57,11 @@ layout: base.njk
             <img src="{{ thumb }}" alt="{{ entry.data.title }}" loading="lazy"
               onerror="this.parentElement.innerHTML='<div class=thumb-unavailable><span>Preview unavailable</span></div>'">
           {% else %}
-  {% if entry.data.tool %}
-    <div class="thumb-curriculum">
-      <span class="thumb-curriculum-tool">{{ entry.data.tool }}</span>
-      <span class="thumb-curriculum-label">official curriculum</span>
-    </div>
+  {% if entry.data.tool or not entry.data.video_url %}
+      <div class="thumb-curriculum">
+        <span class="thumb-curriculum-tool">{{ entry.data.tool or entry.data.creator }}</span>
+        <span class="thumb-curriculum-label">{{ entry.data.tool and "official curriculum" or "reference" }}</span>
+      </div>
       {% else %}
         {% if entry.data.tool %}
           <div class="thumb-curriculum">
