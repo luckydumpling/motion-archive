@@ -13,7 +13,7 @@ contributor: Oliver Aemisegger
 tags: [expressions, scripting, workflow]
 techniques: [expressions, scripting]
 status: active
-resource: true
+is_resource: true
 ---
 
 Dan Ebberts's MotionScript is the most rigorous reference for After Effects expressions on the internet. Where most tutorials show you what to copy and paste, Ebberts explains the underlying logic — how expressions work, why they behave as they do, and how to think through problems from first principles.

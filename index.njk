@@ -57,27 +57,20 @@ layout: base.njk
             <img src="{{ thumb }}" alt="{{ entry.data.title }}" loading="lazy"
               onerror="this.parentElement.innerHTML='<div class=thumb-unavailable><span>Preview unavailable</span></div>'">
           {% else %}
-  {% if entry.data.tool or not entry.data.video_url %}
-      <div class="thumb-curriculum">
-        <span class="thumb-curriculum-tool">{{ entry.data.tool or entry.data.creator }}</span>
-        <span class="thumb-curriculum-label">{{ entry.data.tool and "official curriculum" or "reference" }}</span>
-      </div>
-      {% else %}
-        {% if entry.data.resource %}
-          <div class="thumb-curriculum">
-            <span class="thumb-curriculum-tool">{{ entry.data.creator }}</span>
-            <span class="thumb-curriculum-label">reference</span>
-          </div>
-        {% elif entry.data.tool %}
-          <div class="thumb-curriculum">
-            <span class="thumb-curriculum-tool">{{ entry.data.tool }}</span>
-            <span class="thumb-curriculum-label">official curriculum</span>
-          </div>
-        {% else %}
-          <div class="thumb-unavailable"><span>No preview</span></div>
-        {% endif %}
-      {% endif %}
-{% endif %}
+          {% if entry.data.is_resource %}
+            <div class="thumb-curriculum">
+              <span class="thumb-curriculum-tool">{{ entry.data.creator }}</span>
+              <span class="thumb-curriculum-label">reference</span>
+            </div>
+          {% elif entry.data.tool %}
+            <div class="thumb-curriculum">
+              <span class="thumb-curriculum-tool">{{ entry.data.tool }}</span>
+              <span class="thumb-curriculum-label">official curriculum</span>
+            </div>
+          {% else %}
+            <div class="thumb-unavailable"><span>No preview</span></div>
+          {% endif %}
+          {% endif %}
         </div>
         <div class="card-body">
           <div class="card-meta">
