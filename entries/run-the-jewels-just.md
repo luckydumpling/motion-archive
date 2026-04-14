@@ -5,8 +5,8 @@ type: inspiration
 tool: other
 creator: Winston Hacking
 year: 2020
-source_url: https://vimeo.com/439411290/6dc65121bb
-video_url: https://vimeo.com/439411290/6dc65121bb
+source_url: https://vimeo.com/439411290/6dc65121bb?fl=pl&fe=sh
+video_url: https://vimeo.com/439411290/6dc65121bb?fl=pl&fe=sh
 accessed: 2026-04-14
 contributor: Oliver Aemisegger
 tags: [collage, rhythm, sound-sync, typography]
