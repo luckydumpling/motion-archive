@@ -11,6 +11,7 @@ contributor: Oliver Aemisegger
 tags: [history, composition, typography, motion-systems]
 techniques: [composition, typography]
 status: active
+resource: true
 ---
 
 The most comprehensive reference archive for film and television title sequences online. Art of the Title documents the history and craft of title design with detailed breakdowns, designer interviews, and high-quality stills and video for sequences from 1900 to the present.

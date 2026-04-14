@@ -13,6 +13,7 @@ contributor: Oliver Aemisegger
 tags: [workflow, fundamentals, expressions, compositing]
 techniques: [workflow, compositing]
 status: active
+resource: true
 ---
 
 Andrew Kramer's Video Copilot has been the most influential free After Effects tutorial resource since 2006. Kramer built his reputation by making complex techniques accessible — his tutorials are project-based, clearly explained, and have introduced generations of motion designers to After Effects.

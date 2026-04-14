@@ -63,7 +63,12 @@ layout: base.njk
         <span class="thumb-curriculum-label">{{ entry.data.tool and "official curriculum" or "reference" }}</span>
       </div>
       {% else %}
-        {% if entry.data.tool %}
+        {% if entry.data.resource %}
+          <div class="thumb-curriculum">
+            <span class="thumb-curriculum-tool">{{ entry.data.creator }}</span>
+            <span class="thumb-curriculum-label">reference</span>
+          </div>
+        {% elif entry.data.tool %}
           <div class="thumb-curriculum">
             <span class="thumb-curriculum-tool">{{ entry.data.tool }}</span>
             <span class="thumb-curriculum-label">official curriculum</span>
