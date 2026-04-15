@@ -2,7 +2,7 @@
 layout: entry.njk
 title: Stash
 type: inspiration
-creator: Stephen Price
+creator: Stash
 year: 2004
 source_url: https://www.stashmedia.tv
 video_url:
