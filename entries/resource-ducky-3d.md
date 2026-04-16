@@ -17,6 +17,6 @@ is_resource: true
 
 Nathan Duck's Ducky 3D channel is the primary resource for motion graphics in Blender. Where most Blender tutorials focus on modelling, rendering or visual effects for film, Ducky 3D addresses the specific concerns of motion design: looping animation, procedural systems, geometry nodes for generative movement, and the kind of abstract, rhythm-driven work that defines contemporary commercial and concert visual production.
 
-The tutorials are project-based and consistently applied to real motion design contexts — advertising aesthetics, seamless loops, typographic animation — making them directly relevant to students coming from an After Effects background looking to extend their practice into Blender.
+The tutorials are project-based and consistently applied to real motion design contexts: advertising aesthetics, seamless loops, typographic animation. Making them directly relevant to students coming from an After Effects background looking to extend their practice into Blender.
 
 → [Ducky 3D](https://www.youtube.com/@TheDucky3D/videos)
