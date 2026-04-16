@@ -2,7 +2,7 @@
 layout: entry.njk
 title: Brands in Motion
 type: inspiration
-creator: Jamie Quantrill & Winston Duke
+creator: Brands in Motion
 year: 2020
 source_url: https://www.brandsinmotion.xyz
 video_url:
