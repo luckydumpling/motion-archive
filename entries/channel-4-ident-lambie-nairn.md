@@ -9,7 +9,7 @@ source_url: https://www.youtube.com/watch?v=o7Dkcip7ER8
 video_url: https://www.youtube.com/watch?v=o7Dkcip7ER8
 accessed: 2026-04-14
 contributor: Oliver Aemisegger
-tags: [branding, iteration, motion-systems, 3D, composition]
+tags: [branding, iteration, motion-systems, 3D, composition, history]
 techniques: [motion-systems, iteration, composition]
 status: active
 ---
