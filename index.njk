@@ -4,6 +4,10 @@ layout: base.njk
 {% set allTags = collections.allTags %}
 
 <div class="filter-bar">
+  <div class="search-row">
+    <input type="text" id="search-input" placeholder="Search titles, creators, tags…" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="filter-divider"></div>
   <div class="filter-section">
     <div class="filter-label">Type</div>
     <div class="filter-row" id="type-filters">
@@ -111,6 +115,7 @@ const cards = Array.from(document.querySelectorAll('.card'));
 let activeType = 'all';
 let activeTech = 'all';
 let activeTool = 'all';
+let searchQuery = '';
 
 function updateCount(n) {
   const el = document.getElementById('count');
@@ -125,7 +130,12 @@ function cardMatches(card, type, tech, tool) {
   const matchType = type === 'all' || card.dataset.type === type;
   const matchTech = tech === 'all' || (card.dataset.tags || '').split(',').includes(tech);
   const matchTool = tool === 'all' || card.dataset.tool === tool;
-  return matchType && matchTech && matchTool;
+  const q = searchQuery;
+  const matchQuery = qlmanage -t -s 1000 -o . picture.svg  ||
+    card.querySelector('.card-title').textContent.toLowerCase().includes(q) ||
+    (card.dataset.tags || '').toLowerCase().includes(q) ||
+    Array.from(card.querySelectorAll('.meta-text')).some(el => el.textContent.toLowerCase().includes(q));
+  return matchType && matchTech && matchTool && matchQuery;
 }
 
 function filter() {
@@ -185,6 +195,10 @@ document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(btn =>
   });
 });
 
+document.getElementById('search-input').addEventListener('input', e => {
+  searchQuery = e.target.value.toLowerCase().trim();
+  filter();
+});
 const params = new URLSearchParams(window.location.search);
 const techParam = params.get('tech');
 if (techParam) {
