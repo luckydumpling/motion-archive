@@ -55,10 +55,12 @@ layout: base.njk
         data-tool="{{ entry.data.tool }}">
         <div class="thumb{% if entry.data.type == 'literature' %} thumb-book{% endif %}">
           {% if entry.data.type == "literature" %}
-            {% if entry.data.isbn %}
-              <img src="https://covers.openlibrary.org/b/isbn/{{ entry.data.isbn }}-L.jpg?default=false" alt="{{ entry.data.title }}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=thumb-book-placeholder><span>No cover available</span></div>'">
+            {% if entry.data.cover_url %}
+              <img src="{{ entry.data.cover_url }}" alt="{{ entry.data.title }}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=thumb-book-placeholder><span class=thumb-book-title>{{ entry.data.title }}</span><span class=thumb-book-creator>{{ entry.data.creator }}</span></div>'">
+            {% elif entry.data.isbn %}
+              <img src="https://covers.openlibrary.org/b/isbn/{{ entry.data.isbn }}-L.jpg?default=false" alt="{{ entry.data.title }}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=thumb-book-placeholder><span class=thumb-book-title>{{ entry.data.title }}</span><span class=thumb-book-creator>{{ entry.data.creator }}</span></div>'">
             {% else %}
-              <div class="thumb-book-placeholder"><span>No cover available</span></div>
+              <div class="thumb-book-placeholder"><span class="thumb-book-title">{{ entry.data.title }}</span><span class="thumb-book-creator">{{ entry.data.creator }}</span></div>
             {% endif %}
           {% elif entry.data.status == "unavailable" %}
             <div class="thumb-unavailable">

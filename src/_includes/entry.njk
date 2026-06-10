@@ -27,9 +27,13 @@ layout: base.njk
   </div>
 
   {% if type == "literature" %}
-    {% if isbn %}
+    {% if cover_url or isbn %}
       <div class="book-cover-wrap">
-        <img src="https://covers.openlibrary.org/b/isbn/{{ isbn }}-L.jpg?default=false" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
+        {% if cover_url %}
+          <img src="{{ cover_url }}" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
+        {% else %}
+          <img src="https://covers.openlibrary.org/b/isbn/{{ isbn }}-L.jpg?default=false" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
+        {% endif %}
       </div>
     {% endif %}
   {% elif status == "unavailable" %}
@@ -100,13 +104,7 @@ layout: base.njk
       <div class="attr-item">
         <span class="attr-label">Video license</span>
         <span class="attr-value">
-          {% if type == "literature" %}
-    {% if isbn %}
-      <div class="book-cover-wrap">
-        <img src="https://covers.openlibrary.org/b/isbn/{{ isbn }}-L.jpg?default=false" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
-      </div>
-    {% endif %}
-  {% elif status == "unavailable" %}
+          {% if status == "unavailable" %}
             No longer available
           {% elif video_license %}
             {{ video_license }}
