@@ -5,7 +5,7 @@ layout: base.njk
 
 <div class="filter-bar">
   <div class="search-row">
-    <input type="text" id="search-input" placeholder="Search titles, creators, tags…" autocomplete="off" spellcheck="false">
+    <input type="text" id="search-input" placeholder="Search titles, creators, tags..." autocomplete="off" spellcheck="false">
   </div>
   <div class="filter-divider"></div>
   <div class="filter-section">
@@ -131,8 +131,8 @@ function cardMatches(card, type, tech, tool) {
   const matchTech = tech === 'all' || (card.dataset.tags || '').split(',').includes(tech);
   const matchTool = tool === 'all' || card.dataset.tool === tool;
   const q = searchQuery;
-  const matchQuery = qlmanage -t -s 1000 -o . picture.svg  ||
-    card.querySelector('.card-title').textContent.toLowerCase().includes(q) ||
+  const matchQuery = !q ||
+    (card.querySelector('.card-title') ? card.querySelector('.card-title').textContent.toLowerCase().includes(q) : false) ||
     (card.dataset.tags || '').toLowerCase().includes(q) ||
     Array.from(card.querySelectorAll('.meta-text')).some(el => el.textContent.toLowerCase().includes(q));
   return matchType && matchTech && matchTool && matchQuery;
@@ -195,7 +195,7 @@ document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(btn =>
   });
 });
 
-document.getElementById('search-input').addEventListener('input', e => {
+document.getElementById('search-input').addEventListener('input', function(e) {
   searchQuery = e.target.value.toLowerCase().trim();
   filter();
 });
