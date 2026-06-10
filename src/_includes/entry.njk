@@ -26,7 +26,13 @@ layout: base.njk
     {% endfor %}
   </div>
 
-  {% if status == "unavailable" %}
+  {% if type == "literature" %}
+    {% if isbn %}
+      <div class="book-cover-wrap">
+        <img src="https://covers.openlibrary.org/b/isbn/{{ isbn }}-L.jpg?default=false" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
+      </div>
+    {% endif %}
+  {% elif status == "unavailable" %}
     <div class="video-unavailable">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/><line x1="4" y1="4" x2="20" y2="20"/></svg>
       <p>This video is no longer available at the original URL.</p>
@@ -74,10 +80,12 @@ layout: base.njk
         <span class="attr-label">Year</span>
         <span class="attr-value">{{ year }}</span>
       </div>
+      {% if type != "literature" %}
       <div class="attr-item">
         <span class="attr-label">Platform</span>
         <span class="attr-value">{{ video_url | platformFromUrl }}</span>
       </div>
+      {% endif %}
       <div class="attr-item">
         <span class="attr-label">Accessed</span>
         <span class="attr-value">{{ accessed | formatDate }}</span>
@@ -86,10 +94,19 @@ layout: base.njk
         <span class="attr-label">Source</span>
         <a href="{{ source_url }}" class="attr-link" target="_blank" rel="noopener">{{ source_url }}</a>
       </div>
+      {% if type == "literature" %}
+      {% if isbn %}<div class="attr-item"><span class="attr-label">ISBN</span><span class="attr-value">{{ isbn }}</span></div>{% endif %}
+      {% else %}
       <div class="attr-item">
         <span class="attr-label">Video license</span>
         <span class="attr-value">
-          {% if status == "unavailable" %}
+          {% if type == "literature" %}
+    {% if isbn %}
+      <div class="book-cover-wrap">
+        <img src="https://covers.openlibrary.org/b/isbn/{{ isbn }}-L.jpg?default=false" alt="{{ title }}" onerror="this.parentElement.style.display='none'">
+      </div>
+    {% endif %}
+  {% elif status == "unavailable" %}
             No longer available
           {% elif video_license %}
             {{ video_license }}
@@ -98,6 +115,7 @@ layout: base.njk
           {% endif %}
         </span>
       </div>
+      {% endif %}
       <div class="attr-item">
         <span class="attr-label">Contributor</span>
         <span class="attr-value">{{ contributor }}</span>
