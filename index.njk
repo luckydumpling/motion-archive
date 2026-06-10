@@ -163,17 +163,7 @@ document.getElementById('type-filters').querySelectorAll('.ftag').forEach(btn =>
     document.getElementById('type-filters').querySelectorAll('.ftag').forEach(b => b.classList.remove('active-type'));
     btn.classList.add('active-type');
     activeType = btn.dataset.type;
-    const params = new URLSearchParams(window.location.search);
-const techParam = params.get('tech');
-if (techParam) {
-  const btn = document.querySelector('#tech-filters .ftag[data-tech="' + techParam + '"]');
-  if (btn) {
-    document.querySelectorAll('#tech-filters .ftag').forEach(b => b.classList.remove('active-tech'));
-    btn.classList.add('active-tech');
-    activeTech = techParam;
-  }
-}
-filter();
+    filter();
   });
 });
 
@@ -195,5 +185,15 @@ document.getElementById('tool-filters').querySelectorAll('.ftag').forEach(btn =>
   });
 });
 
+const params = new URLSearchParams(window.location.search);
+const techParam = params.get('tech');
+if (techParam) {
+  const btn = document.querySelector('#tech-filters .ftag[data-tech="' + techParam + '"]');
+  if (btn) {
+    document.querySelectorAll('#tech-filters .ftag').forEach(b => b.classList.remove('active-tech'));
+    btn.classList.add('active-tech');
+    activeTech = techParam;
+  }
+}
 filter();
 </script>
