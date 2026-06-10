@@ -22,7 +22,7 @@ layout: base.njk
 
   <div class="tag-list">
     {% for tag in tags %}
-      <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>
+      <a href="/motion-archive/?tech={{ tag }}" class="tag">{{ tag }}</a>
     {% endfor %}
   </div>
 
@@ -55,7 +55,7 @@ layout: base.njk
     <h2 class="section-label">Key techniques</h2>
     <div class="tag-list">
       {% for t in techniques %}
-        <a href="/tags/{{ t }}/" class="tag">{{ t }}</a>
+        <a href="/motion-archive/?tech={{ t }}" class="tag">{{ t }}</a>
       {% endfor %}
     </div>
   </section>
