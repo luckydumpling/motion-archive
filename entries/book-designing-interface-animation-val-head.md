@@ -6,7 +6,7 @@ creator: Val Head
 year: 2016
 isbn: 9781933820323
 source_url: https://openlibrary.org/isbn/9781933820323
-cover_url: https://rosenfeldmedia.com/wp-content/uploads/2016/07/DIA_cover.jpg
+cover_url: https://rm-media.nyc3.digitaloceanspaces.com/wp-content/uploads/2023/04/26-designing-interface-animation.jpg
 accessed: 2026-06-11
 contributor: Oliver Aemisegger
 tags: [motion-systems, workflow, timing, easing]

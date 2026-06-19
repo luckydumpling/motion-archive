@@ -6,7 +6,7 @@ creator: Lidwell, Holden & Butler
 year: 2010
 isbn: 9781592535873
 source_url: https://openlibrary.org/isbn/9781592535873
-cover_url: https://images.quarto.com/9781592535873.jpg
+cover_url: https://covers.openlibrary.org/b/isbn/9781592535873-L.jpg
 accessed: 2026-06-11
 contributor: Oliver Aemisegger
 tags: [composition, motion-systems, workflow]

@@ -6,7 +6,7 @@ creator: Susan Weinschenk
 year: 2011
 isbn: 9780321767530
 source_url: https://openlibrary.org/isbn/9780321767530
-cover_url: https://images.routledge.com/common/jackets/crclarge/978032176/9780321767530.jpg
+cover_url: https://www.peachpit.com/ShowCover.aspx?isbn=9780321767530&type=f
 accessed: 2026-06-11
 contributor: Oliver Aemisegger
 tags: [composition, motion-systems, workflow]
