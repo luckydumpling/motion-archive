@@ -5,8 +5,8 @@ type: inspiration
 tool: other
 creator: Territory Studio
 year: 2017
-source_url: https://vimeo.com/240920045
-video_url: https://vimeo.com/240920045
+source_url: https://www.youtube.com/watch?v=H07HumKRQKE
+video_url: https://www.youtube.com/watch?v=H07HumKRQKE
 accessed: 2026-06-11
 contributor: Oliver Aemisegger
 tags: [compositing, motion-systems, depth, cinematic, composition]
